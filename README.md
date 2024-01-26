@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Date Range Picker Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project implements a customizable date range picker component in React. It allows users to select date ranges with various predefined options like "Last 7 Days", "Last 15 Days", and "Last 30 Days". The component is built with flexibility and ease of use in mind, suitable for integration into broader applications requiring date selection functionality.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Selection of custom date ranges
+- Predefined date ranges for quick selection
+- Business day filtering (weekends excluded)
+- Year constraint (restricts selection to a specified year onwards)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 🎥
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Demo GIF](https://im.ezgif.com/tmp/ezgif-1-b6a24599c7.gif)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to run the Date Range Picker project on your local machine:
 
-### `npm run build`
+1. **Clone the repository**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/gem-codes/date-range-picker.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the project directory**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd date-range-picker
+   ```
 
-### `npm run eject`
+3. **Install dependencies**:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   npm install
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   npm start
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+5. **View the App**: Open your web browser and go to [http://localhost:3000](http://localhost:3000) to use the Date Range Picker.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Select a Start Date**: Click on the first date input field to open the date picker and select the start date for your range. The date picker prevents the selection of dates before the year 2024 and weekends.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Select an End Date**: Click on the second date input field to choose the end date for your range. The date picker will ensure that the end date is not before the start date.
+
+3. **Observe Real-Time Updates and Validation**:
+
+   - The selected date range will be displayed below the date pickers.
+   - If the start date is after the end date, an error message will be displayed.
+   - The weekends within the selected date range will be listed for your reference.
+
+4. **Use Predefined Date Ranges**: For quick selection, use the predefined date range buttons such as "Last 7 Days", "Last 15 Days", and "Last 30 Days". These buttons automatically adjust the start and end dates based on today's date.
+
+5. **Custom Date Validation**: The component also ensures that the dates fall within business days and meet the specified constraints (e.g., year restriction).
